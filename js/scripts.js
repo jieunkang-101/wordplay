@@ -4,14 +4,14 @@ $(document).ready(function() {
     var splitOrigSentence = origSentence.split(' ');
   
     console.log(splitOrigSentence[2]);
-    
-    var longerthanthree = [];
+    var longerthanthree = splitOrigSentence.filter(word => word.length >3);
+    // var longerthanthree = [];
 
-    splitOrigSentence.forEach(function(word) {
-      if(word.length >= 3)
-      {longerthanthree.push(word);}
-    });
-   console.log(longerthanthree)
+  //   splitOrigSentence.forEach(function(word) {
+  //     if(word.length >= 3)
+  //     {longerthanthree.push(word);}
+  //   });
+  //  console.log(longerthanthree)
   
     var reverse = longerthanthree.reverse().join();
     console.log(reverse);
